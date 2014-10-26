@@ -20,12 +20,11 @@ front.loadImage("images/link.png");
 int w = front.getWidth(); // width from the imported image
 int h = front.getHeight(); // height from the imported image
 
-unsigned char* pixels = front.getPixels(); // I still don't understand what unsigned char* is but this line read the info of the pixels in the image
-
 for(int y = 0; y < h; y++) { // loops the height pixels from the image
 		for(int x = 0; x < w; x++) { // loops through the width pixels from the image
 			ofColor voxColor = front.getColor(y,x); // gets the color belonging to that particular pixel in the image
-                if (voxColor.a != 0){  // if the alpha channel of the image says it's transparent it ignores it.
+            if (voxColor.a != 0)   // if the alpha channel of the image says it's transparent it ignores it.
+            {
 			int voxSize = 10;  // Dictamines the size the Voxels will have
 			ofPoint voxPos = ofPoint(x*voxSize,y*voxSize,0); // Determines position in space of the voxel
 			Voxel thisVoxel; // Creates an instance in memory of the voxel
