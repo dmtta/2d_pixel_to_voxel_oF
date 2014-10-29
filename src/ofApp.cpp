@@ -25,10 +25,10 @@ for(int y = 0; y < h; y++) { // loops the height pixels from the image
 			ofColor voxColor = front.getColor(y,x); // gets the color belonging to that particular pixel in the image
             if (voxColor.a != 0)   // if the alpha channel of the image says it's transparent it ignores it.
             {
-			int voxSize = 10;  // Dictamines the size the Voxels will have
+			int voxSize = 30;  // Dictamines the size the Voxels will have
 			ofPoint voxPos = ofPoint(x*voxSize,y*voxSize,0); // Determines position in space of the voxel
 			Voxel thisVoxel; // Creates an instance in memory of the voxel
-			thisVoxel.setInit(voxPos*1.3,voxSize,voxColor); // initializes the voxel's position and color
+			thisVoxel.setInit(voxPos*1,voxSize,voxColor); // initializes the voxel's position and color
 			myVoxels.push_back(thisVoxel); // adds it to the array
 			}
 		}
